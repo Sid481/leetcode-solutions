@@ -35,11 +35,12 @@ jobs:
           sed -i -E "s/\| *🔴 Hard *\| *[0-9]+ *\|/| 🔴 Hard     | $HARD               |/" README.md
 
 
-      - name: Commit and Push changes
+            - name: Commit and Push changes
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           git add README.md
           git commit -m "📊 Updated problem counts" || echo "No changes to commit"
-          # 👇 Push using token from secrets
+          git pull --rebase
           git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git HEAD:$(echo ${{ github.ref }} | cut -d'/' -f3)
+
