@@ -5,7 +5,10 @@ on:
     paths:
       - '**.java'
   schedule:
-    - cron: '0 0 * * *' # Daily at midnight
+    - cron: '0 0 * * *'
+
+permissions:
+  contents: write
 
 jobs:
   update-readme:
@@ -13,13 +16,14 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GH_TOKEN }}
 
       - name: Count LeetCode solutions
         run: |
           EASY=$(find Easy -name '*.java' | wc -l || echo 0)
           MEDIUM=$(find Medium -name '*.java' | wc -l || echo 0)
           HARD=$(find Hard -name '*.java' | wc -l || echo 0)
-
           echo "EASY=$EASY" >> $GITHUB_ENV
           echo "MEDIUM=$MEDIUM" >> $GITHUB_ENV
           echo "HARD=$HARD" >> $GITHUB_ENV
