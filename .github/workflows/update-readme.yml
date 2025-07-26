@@ -31,9 +31,9 @@ jobs:
 
       - name: Update README.md
         run: |
-          sed -i -E "s/\| *🟢 Easy *\| *[0-9]+ *\|/| 🟢 Easy     | $EASY               |/" README.md
-          sed -i -E "s/\| *🟡 Medium *\| *[0-9]+ *\|/| 🟡 Medium   | $MEDIUM               |/" README.md
-          sed -i -E "s/\| *🔴 Hard *\| *[0-9]+ *\|/| 🔴 Hard     | $HARD               |/" README.md
+          sed -i -E "s/(\| 🟢 Easy\s+\|\s+)[0-9]+(\s+\|)/\1$EASY\2/" README.md
+          sed -i -E "s/(\| 🟡 Medium\s+\|\s+)[0-9]+(\s+\|)/\1$MEDIUM\2/" README.md
+          sed -i -E "s/(\| 🔴 Hard\s+\|\s+)[0-9]+(\s+\|)/\1$HARD\2/" README.md
 
       - name: Commit and Push changes
         run: |
