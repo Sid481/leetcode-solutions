@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GH_PAT }}
+          token: ${{ secrets.GH_TOKEN }}  # 🔥 CRITICAL LINE
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -21,14 +21,14 @@ jobs:
           python-version: 3.11
 
       - name: Run sort script
-        run: |
-          python sort_problems.py
+        run: python sort_problems.py
 
       - name: Commit & Push changes
         env:
-          GH_PAT: ${{ secrets.GH_PAT }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add .
-          git commit -m "Auto-sorted LeetCode problems" || e
+          git commit -m "Auto-sorted LeetCode problems" || echo "No changes to commit"
+          git push https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git
