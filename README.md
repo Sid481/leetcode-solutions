@@ -32,5 +32,14 @@ Each solution is automatically pushed here using the **LeetHub Chrome Extension*
 ## Backtracking
 |  |
 | ------- |
+| [0022-generate-parentheses](https://github.com/Sid481/leetcode-solutions/tree/master/0022-generate-parentheses) |
 | [0039-combination-sum](https://github.com/Sid481/leetcode-solutions/tree/master/0039-combination-sum) |
+## String
+|  |
+| ------- |
+| [0022-generate-parentheses](https://github.com/Sid481/leetcode-solutions/tree/master/0022-generate-parentheses) |
+## Dynamic Programming
+|  |
+| ------- |
+| [0022-generate-parentheses](https://github.com/Sid481/leetcode-solutions/tree/master/0022-generate-parentheses) |
 <!---LeetCode Topics End-->
