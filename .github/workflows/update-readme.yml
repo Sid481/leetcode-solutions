@@ -1,15 +1,15 @@
-name: Update README Problem Count
+name: Update README Problem Count and Folder Structure
 
 on:
   push:
     paths:
       - '**.java'
   schedule:
-    - cron: '0 0 * * *'  # Runs daily at midnight
-  workflow_dispatch:      # 👈 Allows manual trigger from GitHub UI
+    - cron: '0 0 * * *'  # daily at midnight
+  workflow_dispatch:
 
 permissions:
-  contents: write  # 👈 This gives the workflow permission to push to the repo
+  contents: write
 
 jobs:
   update-readme:
@@ -29,29 +29,33 @@ jobs:
           echo "MEDIUM=$MEDIUM" >> $GITHUB_ENV
           echo "HARD=$HARD" >> $GITHUB_ENV
 
-      - name: Print problem counts (debug)
+      - name: Log Problem Counts
         run: |
-          echo "✅ Easy: $EASY"
-          echo "✅ Medium: $MEDIUM"
-          echo "✅ Hard: $HARD"
+          echo "Easy: $EASY"
+          echo "Medium: $MEDIUM"
+          echo "Hard: $HARD"
 
-      - name: Print README before update (debug)
-        run: cat README.md
-
-      - name: Update README.md with problem counts
+      - name: Update problem count in README.md
         run: |
           sed -i -E "s/(\| 🟢 Easy\s+\|\s+)[0-9]+(\s+\|)/\1$EASY\2/" README.md
           sed -i -E "s/(\| 🟡 Medium\s+\|\s+)[0-9]+(\s+\|)/\1$MEDIUM\2/" README.md
           sed -i -E "s/(\| 🔴 Hard\s+\|\s+)[0-9]+(\s+\|)/\1$HARD\2/" README.md
 
-      - name: Print README after update (debug)
-        run: cat README.md
+      - name: Regenerate Folder Structure
+        run: |
+          STRUCTURE=$(find . -maxdepth 1 -type d \( -name Easy -o -name Medium -o -name Hard \) | sed 's|^\./|├── |')
+          awk -v structure="$STRUCTURE" '
+            BEGIN { in_section=0 }
+            /## 📂 Folder Structure/ { print; print structure; in_section=1; next }
+            /^<!---LeetCode Topics Start-->/ { in_section=0 }
+            !in_section { print }
+          ' README.md > README.tmp && mv README.tmp README.md
 
-      - name: Pull, Commit, and Push changes
+      - name: Commit and push changes
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git pull --rebase
           git add README.md
-          git commit -m "📊 Updated problem counts" || echo "⚠️ No changes to commit"
+          git commit -m "📂 Updated problem counts and folder structure" || echo "No changes to commit"
+          git pull --rebase
           git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git HEAD:$(echo ${{ github.ref }} | cut -d'/' -f3)
