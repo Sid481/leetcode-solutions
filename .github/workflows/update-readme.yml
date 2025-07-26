@@ -28,11 +28,12 @@ jobs:
           echo "MEDIUM=$MEDIUM" >> $GITHUB_ENV
           echo "HARD=$HARD" >> $GITHUB_ENV
 
-      - name: Update README.md
+           - name: Update README.md
         run: |
-          sed -i '/| 🟢 Easy     |/c\| 🟢 Easy     | '"$EASY"'               |' README.md
-          sed -i '/| 🟡 Medium   |/c\| 🟡 Medium   | '"$MEDIUM"'               |' README.md
-          sed -i '/| 🔴 Hard     |/c\| 🔴 Hard     | '"$HARD"'               |' README.md
+          sed -i -E "s/\| *🟢 Easy *\| *[0-9]+ *\|/| 🟢 Easy     | $EASY               |/" README.md
+          sed -i -E "s/\| *🟡 Medium *\| *[0-9]+ *\|/| 🟡 Medium   | $MEDIUM               |/" README.md
+          sed -i -E "s/\| *🔴 Hard *\| *[0-9]+ *\|/| 🔴 Hard     | $HARD               |/" README.md
+
 
       - name: Commit and Push changes
         run: |
