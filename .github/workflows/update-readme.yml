@@ -5,7 +5,8 @@ on:
     paths:
       - '**.java'
   schedule:
-    - cron: '0 0 * * *' # Runs daily at midnight
+    - cron: '0 0 * * *'  # Runs daily at midnight
+  workflow_dispatch:      # 👈 Allows manual trigger from GitHub UI
 
 permissions:
   contents: write  # 👈 This gives the workflow permission to push to the repo
@@ -17,7 +18,7 @@ jobs:
       - name: Checkout repo using PAT
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GH_TOKEN }}  # 👈 Uses your personal access token securely
+          token: ${{ secrets.GH_TOKEN }}
 
       - name: Count LeetCode solutions
         run: |
@@ -28,14 +29,13 @@ jobs:
           echo "MEDIUM=$MEDIUM" >> $GITHUB_ENV
           echo "HARD=$HARD" >> $GITHUB_ENV
 
-           - name: Update README.md
+      - name: Update README.md
         run: |
           sed -i -E "s/\| *🟢 Easy *\| *[0-9]+ *\|/| 🟢 Easy     | $EASY               |/" README.md
           sed -i -E "s/\| *🟡 Medium *\| *[0-9]+ *\|/| 🟡 Medium   | $MEDIUM               |/" README.md
           sed -i -E "s/\| *🔴 Hard *\| *[0-9]+ *\|/| 🔴 Hard     | $HARD               |/" README.md
 
-
-            - name: Commit and Push changes
+      - name: Commit and Push changes
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
