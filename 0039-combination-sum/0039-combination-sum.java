@@ -11,7 +11,7 @@ class Solution {
             result.add(new ArrayList<>(path));
             return;
         }
-        for(int i=start; i< candidates.length; i++) {
+        for(int i=start; i<candidates.length; i++) {
             if(candidates[i]>target) continue;
             path.add(candidates[i]);
             backtrack(candidates,target-candidates[i],i,path,result);
