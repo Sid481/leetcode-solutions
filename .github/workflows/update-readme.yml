@@ -1,0 +1,38 @@
+name: Update README Problem Count
+
+on:
+  push:
+    paths:
+      - '**.java'
+  schedule:
+    - cron: '0 0 * * *' # Daily at midnight
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Count LeetCode solutions
+        run: |
+          EASY=$(find Easy -name '*.java' | wc -l || echo 0)
+          MEDIUM=$(find Medium -name '*.java' | wc -l || echo 0)
+          HARD=$(find Hard -name '*.java' | wc -l || echo 0)
+
+          echo "EASY=$EASY" >> $GITHUB_ENV
+          echo "MEDIUM=$MEDIUM" >> $GITHUB_ENV
+          echo "HARD=$HARD" >> $GITHUB_ENV
+
+      - name: Update README.md
+        run: |
+          sed -i '/| 🟢 Easy     |/c\| 🟢 Easy     | '"$EASY"'               |' README.md
+          sed -i '/| 🟡 Medium   |/c\| 🟡 Medium   | '"$MEDIUM"'               |' README.md
+          sed -i '/| 🔴 Hard     |/c\| 🔴 Hard     | '"$HARD"'               |' README.md
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -am "📊 Updated problem counts"
+          git push
