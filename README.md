@@ -28,6 +28,7 @@ Each solution is automatically pushed here using the **LeetHub Chrome Extension*
 ## Array
 |  |
 | ------- |
+| [0035-search-insert-position](https://github.com/Sid481/leetcode-solutions/tree/master/0035-search-insert-position) |
 | [0039-combination-sum](https://github.com/Sid481/leetcode-solutions/tree/master/0039-combination-sum) |
 | [0046-permutations](https://github.com/Sid481/leetcode-solutions/tree/master/0046-permutations) |
 | [0078-subsets](https://github.com/Sid481/leetcode-solutions/tree/master/0078-subsets) |
@@ -56,4 +57,8 @@ Each solution is automatically pushed here using the **LeetHub Chrome Extension*
 |  |
 | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/Sid481/leetcode-solutions/tree/master/0017-letter-combinations-of-a-phone-number) |
+## Binary Search
+|  |
+| ------- |
+| [0035-search-insert-position](https://github.com/Sid481/leetcode-solutions/tree/master/0035-search-insert-position) |
 <!---LeetCode Topics End-->
