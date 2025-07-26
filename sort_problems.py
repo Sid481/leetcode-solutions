@@ -6,28 +6,34 @@ problem_difficulty = {
     "0039": "Medium",
     "0001": "Easy",
     "0072": "Hard",
-    # Add more mappings here
+    "0022": "Medium",
+    # Add more mappings as needed
 }
 
 BASE_PATH = os.getcwd()
 
-def move_file(problem_id, name):
-    difficulty = problem_difficulty.get(problem_id)
-    if not difficulty:
-        print(f"No difficulty found for {problem_id}")
-        return
-    
-    src_dir = os.path.join(BASE_PATH, name)
-    dest_dir = os.path.join(BASE_PATH, difficulty, name)
+def move_problems():
+    for folder in os.listdir(BASE_PATH):
+        folder_path = os.path.join(BASE_PATH, folder)
+        
+        if os.path.isdir(folder_path) and folder[:4].isdigit():
+            problem_id = folder[:4]
+            difficulty = problem_difficulty.get(problem_id)
+            
+            if not difficulty:
+                print(f"❌ No difficulty mapping found for {problem_id} - {folder}")
+                continue
 
-    if not os.path.exists(dest_dir):
-        os.makedirs(dest_dir)
-    
-    for file in os.listdir(src_dir):
-        shutil.move(os.path.join(src_dir, file), os.path.join(dest_dir, file))
-    
-    os.rmdir(src_dir)
-    print(f"Moved {name} to {difficulty}/")
+            dest_dir = os.path.join(BASE_PATH, difficulty, folder)
 
-# Example run
-move_file("0039", "0039-combination-sum")
+            if not os.path.exists(dest_dir):
+                os.makedirs(dest_dir)
+
+            for file in os.listdir(folder_path):
+                shutil.move(os.path.join(folder_path, file), os.path.join(dest_dir, file))
+
+            os.rmdir(folder_path)
+            print(f"✅ Moved {folder} → {difficulty}/")
+
+if __name__ == "__main__":
+    move_problems()
