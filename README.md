@@ -24,3 +24,15 @@ Each solution is automatically pushed here using the **LeetHub Chrome Extension*
 ├── Medium/
 ├── Hard/
 
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Array
+|  |
+| ------- |
+| [0039-combination-sum](https://github.com/Sid481/leetcode-solutions/tree/master/0039-combination-sum) |
+## Backtracking
+|  |
+| ------- |
+| [0039-combination-sum](https://github.com/Sid481/leetcode-solutions/tree/master/0039-combination-sum) |
+<!---LeetCode Topics End-->
