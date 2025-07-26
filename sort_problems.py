@@ -13,25 +13,19 @@ def load_problem_difficulty():
     with open(stats_path, "r") as f:
         stats = json.load(f)
 
+    shas = stats.get("leetcode", {}).get("shas", {})
     difficulty_map = {}
-    for stat in stats.get("stat_status_pairs", []):
-        frontend_id = stat["stat"]["frontend_question_id"]
-        difficulty_level = stat["difficulty"]["level"]
 
-        # Format ID to 4-digit string, like 0039
-        formatted_id = str(frontend_id).zfill(4)
-
-        # Map number to string difficulty
-        if difficulty_level == 1:
-            difficulty_str = "Easy"
-        elif difficulty_level == 2:
-            difficulty_str = "Medium"
-        elif difficulty_level == 3:
-            difficulty_str = "Hard"
-        else:
-            continue
-
-        difficulty_map[formatted_id] = difficulty_str
+    for key, value in shas.items():
+        if isinstance(value, dict):
+            if "difficulty" in value:
+                # Extract problem ID from folder name
+                for part in key.split("-"):
+                    if part.isdigit():
+                        problem_id = part.zfill(4)  # Normalize ID to 4 digits
+                        difficulty = value["difficulty"].capitalize()  # e.g., "medium" -> "Medium"
+                        difficulty_map[problem_id] = difficulty
+                        break
 
     return difficulty_map
 
@@ -39,7 +33,6 @@ def move_problems(difficulty_map):
     for folder in os.listdir(BASE_PATH):
         folder_path = os.path.join(BASE_PATH, folder)
 
-        # Only process folders like "0039-combination-sum"
         if os.path.isdir(folder_path) and folder[:4].isdigit():
             problem_id = folder[:4]
             difficulty = difficulty_map.get(problem_id)
@@ -49,9 +42,7 @@ def move_problems(difficulty_map):
                 continue
 
             dest_dir = os.path.join(BASE_PATH, difficulty, folder)
-
-            if not os.path.exists(dest_dir):
-                os.makedirs(dest_dir)
+            os.makedirs(dest_dir, exist_ok=True)
 
             for file in os.listdir(folder_path):
                 shutil.move(os.path.join(folder_path, file), os.path.join(dest_dir, file))
