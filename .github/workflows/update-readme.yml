@@ -43,4 +43,3 @@ jobs:
           git commit -m "📊 Updated problem counts" || echo "No changes to commit"
           git pull --rebase
           git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git HEAD:$(echo ${{ github.ref }} | cut -d'/' -f3)
-
