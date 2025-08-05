@@ -8,7 +8,7 @@ Each solution is automatically pushed here using the **LeetHub Chrome Extension*
 | Difficulty | Problems Solved |
 |------------|------------------|
 | 🟢 Easy     | 1               |
-| 🟡 Medium   | 9               |
+| 🟡 Medium   | 10               |
 | 🔴 Hard     | 1               |
 
 
