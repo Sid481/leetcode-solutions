@@ -26,7 +26,7 @@ class Solution {
             for(int i=0; i<size; i++) {
                 Pair<TreeNode,Integer>pair = queue.poll();
                 TreeNode node = pair.getKey();
-                int currentIndex = pair.getValue();
+                int currentIndex = pair.getValue()-minindex;
                 if(i==0) firstIndex = currentIndex;
                 if(i==size-1) lastIndex = currentIndex;
 
