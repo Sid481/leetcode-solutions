@@ -21,12 +21,11 @@ class Solution {
         queue.offer(new Pair<>(root,0));
         while(!queue.isEmpty()) {
             int size = queue.size();  
-            int minindex = queue.peek().getValue();
             int firstIndex = 0, lastIndex = 0;
             for(int i=0; i<size; i++) {
                 Pair<TreeNode,Integer>pair = queue.poll();
                 TreeNode node = pair.getKey();
-                int currentIndex = pair.getValue()-minindex;
+                int currentIndex = pair.getValue();
                 if(i==0) firstIndex = currentIndex;
                 if(i==size-1) lastIndex = currentIndex;
 
