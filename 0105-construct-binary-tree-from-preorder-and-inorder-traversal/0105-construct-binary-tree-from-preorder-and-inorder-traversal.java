@@ -21,15 +21,15 @@ class Solution {
         for(int i=0; i<inorder.length; i++) {
             inorderMap.put(inorder[i],i);
         }
-        return helper(inorder,preorder,0,inorder.length-1);
+        return helper(preorder,0,inorder.length-1);
     }
-    private TreeNode helper(int[]inorder,int[]preorder,int left, int right) {
+    private TreeNode helper(int[]preorder,int left, int right) {
         if(left>right) return null;
         int rootVal = preorder[preIndex++];
         TreeNode root = new TreeNode(rootVal);
         int index = inorderMap.get(rootVal);
-        root.left = helper(inorder,preorder,left,index-1);
-        root.right = helper(inorder,preorder,index+1,right);
+        root.left = helper(preorder,left,index-1);
+        root.right = helper(preorder,index+1,right);
         return root;
     }
 }
