@@ -14,23 +14,23 @@
  * }
  */
 class Solution {
+     private Map<Integer,Integer> map;
+     private int postIndex;
     public TreeNode buildTree(int[] inorder, int[] postorder) {
-    if(inorder==null || postorder==null || inorder.length==0 || postorder.length==0)return null;
-    return buildTreeHelper(postorder,0,postorder.length-1,inorder,0,inorder.length-1);
+       map = new HashMap<>();
+       for(int i=0; i<inorder.length; i++) {
+        map.put(inorder[i],i);
+       }
+       postIndex = postorder.length-1;
+       return helper(inorder,postorder,0,inorder.length-1);
     }
-    private TreeNode buildTreeHelper(int[]postorder,int poStart,int poEnd,int[]inorder,int inStart,int inEnd) {
-        if(poStart>poEnd || inStart>inEnd) return null;
-        int mid = 0;
-        TreeNode root = new TreeNode(postorder[poEnd]);
-        for(int i=inStart; i<=inEnd; i++) {
-            if(inorder[i]==root.val) {
-                mid = i;
-                break;
-            }
-        }
-        int leftLevel = mid-inStart;
-        root.left = buildTreeHelper(postorder,poStart,poStart+leftLevel-1,inorder,inStart,mid-1);
-        root.right = buildTreeHelper(postorder,poStart+leftLevel,poEnd-1,inorder,mid+1,inEnd);
+    private TreeNode helper(int[]inorder, int[]postorder, int left, int right) {
+        if(left>right) return null;
+        int rootVal = postorder[postIndex--];
+        TreeNode root = new TreeNode(rootVal);
+        int idx = map.get(rootVal);
+        root.right = helper(inorder,postorder,idx+1,right);
+        root.left = helper(inorder,postorder,left,idx-1);
         return root;
     }
 }
