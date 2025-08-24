@@ -14,19 +14,23 @@
  * }
  */
 class Solution {
-    int minDiff = Integer.MAX_VALUE;
-    Integer prev = null;
     public int minDiffInBST(TreeNode root) {
-        minDiffHelper(root);
-        return minDiff;
-    }
-    private void minDiffHelper(TreeNode node) {
-            if(node==null) return;
-            minDiffHelper(node.left);
-            if(prev!=null) {
+        int minDiff = Integer.MAX_VALUE;
+        Integer prev = null;
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode current = root;
+        while(current!=null || !stack.isEmpty()) {
+            while(current!=null) {
+                stack.push(current);
+                current = current.left;
+            }
+            TreeNode node = stack.pop();
+            if(prev!=null) {   
                 minDiff = Math.min(minDiff,Math.abs(node.val-prev));
             }
             prev = node.val;
-            minDiffHelper(node.right);
+            current = node.right;
+        }
+        return minDiff;
     }
 }
