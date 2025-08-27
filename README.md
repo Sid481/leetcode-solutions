@@ -63,4 +63,20 @@ Each solution is automatically pushed here using the **LeetHub Chrome Extension*
 |  |
 | ------- |
 | [0035-search-insert-position](https://github.com/Sid481/leetcode-solutions/tree/master/0035-search-insert-position) |
+## Tree
+|  |
+| ------- |
+| [0226-invert-binary-tree](https://github.com/Sid481/leetcode-solutions/tree/master/0226-invert-binary-tree) |
+## Depth-First Search
+|  |
+| ------- |
+| [0226-invert-binary-tree](https://github.com/Sid481/leetcode-solutions/tree/master/0226-invert-binary-tree) |
+## Breadth-First Search
+|  |
+| ------- |
+| [0226-invert-binary-tree](https://github.com/Sid481/leetcode-solutions/tree/master/0226-invert-binary-tree) |
+## Binary Tree
+|  |
+| ------- |
+| [0226-invert-binary-tree](https://github.com/Sid481/leetcode-solutions/tree/master/0226-invert-binary-tree) |
 <!---LeetCode Topics End-->
