@@ -7,7 +7,7 @@ Each solution is automatically pushed here using the **LeetHub Chrome Extension*
 
 | Difficulty | Problems Solved |
 |------------|------------------|
-| 🟢 Easy     | 9               |
+| 🟢 Easy     | 10               |
 | 🟡 Medium   | 20               |
 | 🔴 Hard     | 2               |
 
@@ -20,8 +20,8 @@ Each solution is automatically pushed here using the **LeetHub Chrome Extension*
 - 🧪 Language: Java
 
 ## 📂 Folder Structure
-├── Hard
 ├── Medium
+├── Hard
 ├── Easy
 <!---LeetCode Topics Start-->
 # LeetCode Topics
