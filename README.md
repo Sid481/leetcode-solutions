@@ -33,6 +33,7 @@ Each solution is automatically pushed here using the **LeetHub Chrome Extension*
 | [0040-combination-sum-ii](https://github.com/Sid481/leetcode-solutions/tree/master/0040-combination-sum-ii) |
 | [0046-permutations](https://github.com/Sid481/leetcode-solutions/tree/master/0046-permutations) |
 | [0078-subsets](https://github.com/Sid481/leetcode-solutions/tree/master/0078-subsets) |
+| [1397-search-suggestions-system](https://github.com/Sid481/leetcode-solutions/tree/master/1397-search-suggestions-system) |
 ## Backtracking
 |  |
 | ------- |
@@ -47,6 +48,7 @@ Each solution is automatically pushed here using the **LeetHub Chrome Extension*
 | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/Sid481/leetcode-solutions/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0022-generate-parentheses](https://github.com/Sid481/leetcode-solutions/tree/master/0022-generate-parentheses) |
+| [1397-search-suggestions-system](https://github.com/Sid481/leetcode-solutions/tree/master/1397-search-suggestions-system) |
 ## Dynamic Programming
 |  |
 | ------- |
@@ -63,6 +65,7 @@ Each solution is automatically pushed here using the **LeetHub Chrome Extension*
 |  |
 | ------- |
 | [0035-search-insert-position](https://github.com/Sid481/leetcode-solutions/tree/master/0035-search-insert-position) |
+| [1397-search-suggestions-system](https://github.com/Sid481/leetcode-solutions/tree/master/1397-search-suggestions-system) |
 ## Tree
 |  |
 | ------- |
@@ -79,4 +82,16 @@ Each solution is automatically pushed here using the **LeetHub Chrome Extension*
 |  |
 | ------- |
 | [0226-invert-binary-tree](https://github.com/Sid481/leetcode-solutions/tree/master/0226-invert-binary-tree) |
+## Trie
+|  |
+| ------- |
+| [1397-search-suggestions-system](https://github.com/Sid481/leetcode-solutions/tree/master/1397-search-suggestions-system) |
+## Sorting
+|  |
+| ------- |
+| [1397-search-suggestions-system](https://github.com/Sid481/leetcode-solutions/tree/master/1397-search-suggestions-system) |
+## Heap (Priority Queue)
+|  |
+| ------- |
+| [1397-search-suggestions-system](https://github.com/Sid481/leetcode-solutions/tree/master/1397-search-suggestions-system) |
 <!---LeetCode Topics End-->
