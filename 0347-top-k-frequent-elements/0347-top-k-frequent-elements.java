@@ -8,12 +8,9 @@ class Solution {
             map.put(num, map.getOrDefault(num,0)+1);
         }
         maxHeap = new PriorityQueue<>((a,b)->b.getValue()-a.getValue());
-        for(Map.Entry<Integer,Integer> entry : map.entrySet()) {
-            maxHeap.add(entry);
-        }
-        for(int i=0; i<k; i++) {
-            Map.Entry<Integer,Integer> entry = maxHeap.poll();
-            result[i] = entry.getKey();
+        maxHeap.addAll(map.entrySet());
+        for(int i=0; i<k && !maxHeap.isEmpty(); i++) {
+            result[i] = maxHeap.poll().getKey();
         }
         return result;
     }
