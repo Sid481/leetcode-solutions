@@ -9,8 +9,9 @@ class Solution {
         maxHeap.addAll(map.entrySet());
         StringBuilder sb = new StringBuilder();
         while(!maxHeap.isEmpty()) {
-           char ch =  maxHeap.peek().getKey();
-           int count = maxHeap.poll().getValue();
+            Map.Entry<Character,Integer> entry = maxHeap.poll();
+           char ch =  entry.getKey();
+           int count = entry.getValue();
            for(int i=0; i<count; i++) {
             sb.append(ch);
            }
