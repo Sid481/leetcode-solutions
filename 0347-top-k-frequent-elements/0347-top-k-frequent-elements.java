@@ -1,8 +1,8 @@
 class Solution {
-    HashMap<Integer,Integer> map = new HashMap<>();
     PriorityQueue<Map.Entry<Integer,Integer>> maxHeap;
     int result[];
     public int[] topKFrequent(int[] nums, int k) {
+        HashMap<Integer,Integer> map = new HashMap<>();
         result = new int[k];
         for(int num : nums) {
             map.put(num, map.getOrDefault(num,0)+1);
