@@ -93,10 +93,24 @@ Each solution is automatically pushed here using the **LeetHub Chrome Extension*
 ## Sorting
 |  |
 | ------- |
+| [0295-find-median-from-data-stream](https://github.com/Sid481/leetcode-solutions/tree/master/0295-find-median-from-data-stream) |
 | [0720-longest-word-in-dictionary](https://github.com/Sid481/leetcode-solutions/tree/master/0720-longest-word-in-dictionary) |
 | [1397-search-suggestions-system](https://github.com/Sid481/leetcode-solutions/tree/master/1397-search-suggestions-system) |
 ## Heap (Priority Queue)
 |  |
 | ------- |
+| [0295-find-median-from-data-stream](https://github.com/Sid481/leetcode-solutions/tree/master/0295-find-median-from-data-stream) |
 | [1397-search-suggestions-system](https://github.com/Sid481/leetcode-solutions/tree/master/1397-search-suggestions-system) |
+## Two Pointers
+|  |
+| ------- |
+| [0295-find-median-from-data-stream](https://github.com/Sid481/leetcode-solutions/tree/master/0295-find-median-from-data-stream) |
+## Design
+|  |
+| ------- |
+| [0295-find-median-from-data-stream](https://github.com/Sid481/leetcode-solutions/tree/master/0295-find-median-from-data-stream) |
+## Data Stream
+|  |
+| ------- |
+| [0295-find-median-from-data-stream](https://github.com/Sid481/leetcode-solutions/tree/master/0295-find-median-from-data-stream) |
 <!---LeetCode Topics End-->
