@@ -35,6 +35,7 @@ Each solution is automatically pushed here using the **LeetHub Chrome Extension*
 | [0078-subsets](https://github.com/Sid481/leetcode-solutions/tree/master/0078-subsets) |
 | [0720-longest-word-in-dictionary](https://github.com/Sid481/leetcode-solutions/tree/master/0720-longest-word-in-dictionary) |
 | [1397-search-suggestions-system](https://github.com/Sid481/leetcode-solutions/tree/master/1397-search-suggestions-system) |
+| [1962-single-threaded-cpu](https://github.com/Sid481/leetcode-solutions/tree/master/1962-single-threaded-cpu) |
 ## Backtracking
 |  |
 | ------- |
@@ -96,11 +97,13 @@ Each solution is automatically pushed here using the **LeetHub Chrome Extension*
 | [0295-find-median-from-data-stream](https://github.com/Sid481/leetcode-solutions/tree/master/0295-find-median-from-data-stream) |
 | [0720-longest-word-in-dictionary](https://github.com/Sid481/leetcode-solutions/tree/master/0720-longest-word-in-dictionary) |
 | [1397-search-suggestions-system](https://github.com/Sid481/leetcode-solutions/tree/master/1397-search-suggestions-system) |
+| [1962-single-threaded-cpu](https://github.com/Sid481/leetcode-solutions/tree/master/1962-single-threaded-cpu) |
 ## Heap (Priority Queue)
 |  |
 | ------- |
 | [0295-find-median-from-data-stream](https://github.com/Sid481/leetcode-solutions/tree/master/0295-find-median-from-data-stream) |
 | [1397-search-suggestions-system](https://github.com/Sid481/leetcode-solutions/tree/master/1397-search-suggestions-system) |
+| [1962-single-threaded-cpu](https://github.com/Sid481/leetcode-solutions/tree/master/1962-single-threaded-cpu) |
 ## Two Pointers
 |  |
 | ------- |
