@@ -9,7 +9,7 @@ Each solution is automatically pushed here using the **LeetHub Chrome Extension*
 |------------|------------------|
 | 🟢 Easy     | 15               |
 | 🟡 Medium   | 48               |
-| 🔴 Hard     | 8               |
+| 🔴 Hard     | 9               |
 
 
 ## 🛠️ Features
