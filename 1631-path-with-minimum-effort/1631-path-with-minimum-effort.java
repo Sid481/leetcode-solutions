@@ -17,7 +17,7 @@ class Solution {
            int r = curr[1];
            int c = curr[2];
            if(r==row-1 && c==column-1) return diff;
-           //if(dist[r][c]<diff) continue;
+           if(dist[r][c]<diff) continue;
 
            for(int[] dir : direction) {
             int newR = r + dir[0];
