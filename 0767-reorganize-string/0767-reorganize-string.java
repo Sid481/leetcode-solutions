@@ -1,31 +1,38 @@
 class Solution {
     public String reorganizeString(String s) {
-        Map<Character,Integer>map = new HashMap<>();
-
+        int[] count = new int[26];
         for(char ch : s.toCharArray()) {
-            map.put(ch,map.getOrDefault(ch,0)+1);
+            count[ch - 'a']++;
         }
-        for(int size : map.values()) {
-            if(size>(s.length()+1/2)) return "";
-        }
-
-        PriorityQueue<Map.Entry<Character,Integer>> maxHeap = new PriorityQueue<>((a,b)->
-        b.getValue()-a.getValue());
-        
-        maxHeap.addAll(map.entrySet());
-        StringBuilder sb = new StringBuilder();
-        Map.Entry<Character,Integer> prev = null;
-
-        while(!maxHeap.isEmpty()) {
-            Map.Entry<Character,Integer> current = maxHeap.poll();
-            sb.append(current.getKey());
-            current.setValue(current.getValue()-1);
-            if(prev!=null && prev.getValue()>0) {
-                maxHeap.offer(prev);
+        int maxCount = 0;
+        char maxChar = 'a';
+        for(int i = 0; i < 26; i++) {
+            if(count[i] > maxCount) {
+                maxCount = count[i];
+                maxChar = (char) (i + 'a');
             }
-            prev = current;
         }
-        if(sb.length()!=s.length()) return "";
-        return sb.toString();
+        if(maxCount > (s.length()+1)/2) {
+            return "";
+        }
+        char[]result = new char[s.length()];
+        int index = 0;
+
+        while(count[maxChar - 'a'] > 0) {
+            result[index] = maxChar;
+            index += 2;
+            count[maxChar - 'a']--;
+        }
+        for(int i = 0; i < 26; i++) {
+            while(count[i] > 0) {
+                if(index >= result.length) {
+                    index = 1;
+                }
+                result[index] = (char) (i + 'a');
+                index += 2;
+                count[i]--;
+            }
+        }
+        return new String(result);
     }
 }
