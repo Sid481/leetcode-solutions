@@ -51,6 +51,7 @@ Each solution is automatically pushed here using the **LeetHub Chrome Extension*
 | [0017-letter-combinations-of-a-phone-number](https://github.com/Sid481/leetcode-solutions/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0022-generate-parentheses](https://github.com/Sid481/leetcode-solutions/tree/master/0022-generate-parentheses) |
 | [0720-longest-word-in-dictionary](https://github.com/Sid481/leetcode-solutions/tree/master/0720-longest-word-in-dictionary) |
+| [1023-time-based-key-value-store](https://github.com/Sid481/leetcode-solutions/tree/master/1023-time-based-key-value-store) |
 | [1397-search-suggestions-system](https://github.com/Sid481/leetcode-solutions/tree/master/1397-search-suggestions-system) |
 ## Dynamic Programming
 |  |
@@ -65,10 +66,12 @@ Each solution is automatically pushed here using the **LeetHub Chrome Extension*
 | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/Sid481/leetcode-solutions/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0720-longest-word-in-dictionary](https://github.com/Sid481/leetcode-solutions/tree/master/0720-longest-word-in-dictionary) |
+| [1023-time-based-key-value-store](https://github.com/Sid481/leetcode-solutions/tree/master/1023-time-based-key-value-store) |
 ## Binary Search
 |  |
 | ------- |
 | [0035-search-insert-position](https://github.com/Sid481/leetcode-solutions/tree/master/0035-search-insert-position) |
+| [1023-time-based-key-value-store](https://github.com/Sid481/leetcode-solutions/tree/master/1023-time-based-key-value-store) |
 | [1397-search-suggestions-system](https://github.com/Sid481/leetcode-solutions/tree/master/1397-search-suggestions-system) |
 ## Tree
 |  |
@@ -112,6 +115,7 @@ Each solution is automatically pushed here using the **LeetHub Chrome Extension*
 |  |
 | ------- |
 | [0295-find-median-from-data-stream](https://github.com/Sid481/leetcode-solutions/tree/master/0295-find-median-from-data-stream) |
+| [1023-time-based-key-value-store](https://github.com/Sid481/leetcode-solutions/tree/master/1023-time-based-key-value-store) |
 ## Data Stream
 |  |
 | ------- |
