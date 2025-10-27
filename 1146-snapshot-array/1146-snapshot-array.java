@@ -3,13 +3,10 @@ class SnapshotArray {
     Map<Integer, TreeMap<Integer,Integer>> snapMap;
     public SnapshotArray(int length) {
        snapMap = new HashMap<>();
-       for(int i=0; i<length; i++) {
-            snapMap.put(i,new TreeMap<>());
-            snapMap.get(i).put(0,0);
-       }
     }
     
     public void set(int index, int val) {
+       snapMap.putIfAbsent(index, new TreeMap<Integer,Integer>());
        snapMap.get(index).put(snapId,val);
     }
     
@@ -18,7 +15,7 @@ class SnapshotArray {
     }
     
     public int get(int index, int snap_id) {
-        if(!snapMap.containsKey(index)) return 0;
+       if(!snapMap.containsKey(index)) return 0;
        TreeMap<Integer,Integer> map = snapMap.get(index);
        Integer id = map.floorKey(snap_id);
        if(id==null) return 0;
