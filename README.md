@@ -66,6 +66,7 @@ Each solution is automatically pushed here using the **LeetHub Chrome Extension*
 | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/Sid481/leetcode-solutions/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0720-longest-word-in-dictionary](https://github.com/Sid481/leetcode-solutions/tree/master/0720-longest-word-in-dictionary) |
+| [0931-maximum-frequency-stack](https://github.com/Sid481/leetcode-solutions/tree/master/0931-maximum-frequency-stack) |
 | [1023-time-based-key-value-store](https://github.com/Sid481/leetcode-solutions/tree/master/1023-time-based-key-value-store) |
 ## Binary Search
 |  |
@@ -115,9 +116,18 @@ Each solution is automatically pushed here using the **LeetHub Chrome Extension*
 |  |
 | ------- |
 | [0295-find-median-from-data-stream](https://github.com/Sid481/leetcode-solutions/tree/master/0295-find-median-from-data-stream) |
+| [0931-maximum-frequency-stack](https://github.com/Sid481/leetcode-solutions/tree/master/0931-maximum-frequency-stack) |
 | [1023-time-based-key-value-store](https://github.com/Sid481/leetcode-solutions/tree/master/1023-time-based-key-value-store) |
 ## Data Stream
 |  |
 | ------- |
 | [0295-find-median-from-data-stream](https://github.com/Sid481/leetcode-solutions/tree/master/0295-find-median-from-data-stream) |
+## Stack
+|  |
+| ------- |
+| [0931-maximum-frequency-stack](https://github.com/Sid481/leetcode-solutions/tree/master/0931-maximum-frequency-stack) |
+## Ordered Set
+|  |
+| ------- |
+| [0931-maximum-frequency-stack](https://github.com/Sid481/leetcode-solutions/tree/master/0931-maximum-frequency-stack) |
 <!---LeetCode Topics End-->
