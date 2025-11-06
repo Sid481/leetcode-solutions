@@ -15,8 +15,6 @@ class Solution {
         for(Employee emp : employees) {
             map.put(emp.id, emp);
         }
-        Employee employee = map.get(id);
-        List<Integer> empList = employee.subordinates;
         dfs(id,visited,map);
         return sum;
     }
