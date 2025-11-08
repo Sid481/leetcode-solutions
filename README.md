@@ -65,6 +65,7 @@ Each solution is automatically pushed here using the **LeetHub Chrome Extension*
 |  |
 | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/Sid481/leetcode-solutions/tree/master/0017-letter-combinations-of-a-phone-number) |
+| [0133-clone-graph](https://github.com/Sid481/leetcode-solutions/tree/master/0133-clone-graph) |
 | [0720-longest-word-in-dictionary](https://github.com/Sid481/leetcode-solutions/tree/master/0720-longest-word-in-dictionary) |
 | [0931-maximum-frequency-stack](https://github.com/Sid481/leetcode-solutions/tree/master/0931-maximum-frequency-stack) |
 | [1023-time-based-key-value-store](https://github.com/Sid481/leetcode-solutions/tree/master/1023-time-based-key-value-store) |
@@ -81,10 +82,12 @@ Each solution is automatically pushed here using the **LeetHub Chrome Extension*
 ## Depth-First Search
 |  |
 | ------- |
+| [0133-clone-graph](https://github.com/Sid481/leetcode-solutions/tree/master/0133-clone-graph) |
 | [0226-invert-binary-tree](https://github.com/Sid481/leetcode-solutions/tree/master/0226-invert-binary-tree) |
 ## Breadth-First Search
 |  |
 | ------- |
+| [0133-clone-graph](https://github.com/Sid481/leetcode-solutions/tree/master/0133-clone-graph) |
 | [0226-invert-binary-tree](https://github.com/Sid481/leetcode-solutions/tree/master/0226-invert-binary-tree) |
 ## Binary Tree
 |  |
@@ -130,4 +133,8 @@ Each solution is automatically pushed here using the **LeetHub Chrome Extension*
 |  |
 | ------- |
 | [0931-maximum-frequency-stack](https://github.com/Sid481/leetcode-solutions/tree/master/0931-maximum-frequency-stack) |
+## Graph
+|  |
+| ------- |
+| [0133-clone-graph](https://github.com/Sid481/leetcode-solutions/tree/master/0133-clone-graph) |
 <!---LeetCode Topics End-->
