@@ -84,11 +84,13 @@ Each solution is automatically pushed here using the **LeetHub Chrome Extension*
 | ------- |
 | [0133-clone-graph](https://github.com/Sid481/leetcode-solutions/tree/master/0133-clone-graph) |
 | [0226-invert-binary-tree](https://github.com/Sid481/leetcode-solutions/tree/master/0226-invert-binary-tree) |
+| [0801-is-graph-bipartite](https://github.com/Sid481/leetcode-solutions/tree/master/0801-is-graph-bipartite) |
 ## Breadth-First Search
 |  |
 | ------- |
 | [0133-clone-graph](https://github.com/Sid481/leetcode-solutions/tree/master/0133-clone-graph) |
 | [0226-invert-binary-tree](https://github.com/Sid481/leetcode-solutions/tree/master/0226-invert-binary-tree) |
+| [0801-is-graph-bipartite](https://github.com/Sid481/leetcode-solutions/tree/master/0801-is-graph-bipartite) |
 ## Binary Tree
 |  |
 | ------- |
@@ -137,4 +139,9 @@ Each solution is automatically pushed here using the **LeetHub Chrome Extension*
 |  |
 | ------- |
 | [0133-clone-graph](https://github.com/Sid481/leetcode-solutions/tree/master/0133-clone-graph) |
+| [0801-is-graph-bipartite](https://github.com/Sid481/leetcode-solutions/tree/master/0801-is-graph-bipartite) |
+## Union Find
+|  |
+| ------- |
+| [0801-is-graph-bipartite](https://github.com/Sid481/leetcode-solutions/tree/master/0801-is-graph-bipartite) |
 <!---LeetCode Topics End-->
