@@ -79,18 +79,21 @@ Each solution is automatically pushed here using the **LeetHub Chrome Extension*
 |  |
 | ------- |
 | [0226-invert-binary-tree](https://github.com/Sid481/leetcode-solutions/tree/master/0226-invert-binary-tree) |
+| [1492-time-needed-to-inform-all-employees](https://github.com/Sid481/leetcode-solutions/tree/master/1492-time-needed-to-inform-all-employees) |
 ## Depth-First Search
 |  |
 | ------- |
 | [0133-clone-graph](https://github.com/Sid481/leetcode-solutions/tree/master/0133-clone-graph) |
 | [0226-invert-binary-tree](https://github.com/Sid481/leetcode-solutions/tree/master/0226-invert-binary-tree) |
 | [0801-is-graph-bipartite](https://github.com/Sid481/leetcode-solutions/tree/master/0801-is-graph-bipartite) |
+| [1492-time-needed-to-inform-all-employees](https://github.com/Sid481/leetcode-solutions/tree/master/1492-time-needed-to-inform-all-employees) |
 ## Breadth-First Search
 |  |
 | ------- |
 | [0133-clone-graph](https://github.com/Sid481/leetcode-solutions/tree/master/0133-clone-graph) |
 | [0226-invert-binary-tree](https://github.com/Sid481/leetcode-solutions/tree/master/0226-invert-binary-tree) |
 | [0801-is-graph-bipartite](https://github.com/Sid481/leetcode-solutions/tree/master/0801-is-graph-bipartite) |
+| [1492-time-needed-to-inform-all-employees](https://github.com/Sid481/leetcode-solutions/tree/master/1492-time-needed-to-inform-all-employees) |
 ## Binary Tree
 |  |
 | ------- |
