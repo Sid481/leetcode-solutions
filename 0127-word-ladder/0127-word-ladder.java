@@ -11,9 +11,9 @@ class Solution {
 
         while(!queue.isEmpty()) {
             int size = queue.size();
-            if(queue.peek().equals(endWord)) return steps;
             for(int i=0; i<size; i++) {
                 String word = queue.poll();
+                if(word.equals(endWord))return steps;
                 for(int j=0; j<word.length(); j++) {
                     for(char ch='a'; ch<='z'; ch++) {
                         if(ch == word.charAt(j)) continue;
