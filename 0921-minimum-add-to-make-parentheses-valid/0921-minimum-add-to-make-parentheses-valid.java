@@ -4,7 +4,7 @@ class Solution {
         for(char ch : s.toCharArray()) {
             if(ch=='(') {
                 stack.push(ch);
-            } else if(ch==')' && !stack.isEmpty()) {
+            } else if(ch==')' && !stack.isEmpty() && stack.peek()=='(') {
                 stack.pop();
             } else {
                 stack.push(')');
