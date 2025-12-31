@@ -10,7 +10,7 @@ class Solution {
         }
         for(int right=child.length-2; right>=0; right--) {
             if(ratings[right]>ratings[right+1]) 
-            child[right] =Math.max(child[right],child[right+1]+1);
+            child[right] = child[right+1]+1;
         }
         int numberOfCandies = 0;
         for(int i=0; i<child.length; i++) {
