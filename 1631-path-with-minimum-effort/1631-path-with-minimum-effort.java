@@ -26,10 +26,8 @@ class Solution {
                 distance[newR][newC] = newDiff;
                 minHeap.offer(new int[]{newDiff,newR,newC});
                 }
-
             }
-
          }
-         return 0;
+         return distance[row-1][column-1];
     }
 }
