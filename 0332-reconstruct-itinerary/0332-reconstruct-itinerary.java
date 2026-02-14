@@ -1,6 +1,6 @@
 class Solution {
     private Map<String,PriorityQueue<String>> graph = new HashMap<>();
-    private List<String> result = new ArrayList<String>();
+    private List<String> result = new LinkedList<String>();
 
     public List<String> findItinerary(List<List<String>> tickets) {
        for(List<String> ticket : tickets) {
@@ -9,7 +9,6 @@ class Solution {
         graph.computeIfAbsent(from,k->new PriorityQueue<>()).offer(to);
        }
     dfs("JFK");
-    Collections.reverse(result);
     return result;
     }
 
@@ -19,6 +18,6 @@ class Solution {
             String next = destinations.poll();
             dfs(next);
         }
-        result.add(airport);
+        result.addFirst(airport);
     }
 }
