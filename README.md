@@ -20,8 +20,8 @@ Each solution is automatically pushed here using the **LeetHub Chrome Extension*
 - 🧪 Language: Java
 
 ## 📂 Folder Structure
-├── Hard
 ├── Easy
+├── Hard
 ├── Medium
 <!---LeetCode Topics Start-->
 # LeetCode Topics
